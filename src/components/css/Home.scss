@@ -1,0 +1,124 @@
+#home::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100dvh;
+    background: url(../images/bg-1.png);
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.05;
+}
+
+#home-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    height: 80px;
+    padding-top: 30px;
+
+    #home-header-left {
+        span {
+            font-size: 1.7rem;
+            font-weight: 1000;
+            color: var(--secondary-color);
+        }
+    }
+    #home-header-right{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top:35px;
+    }
+}
+
+#home-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: calc(100dvh - 100px);
+    #home-content-left {
+        width: 50%;
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 1000;
+            color: var(--primary-color);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 1000;
+
+            span {
+                color: var(--secondary-color);
+            }
+        }
+
+        button {
+            margin-top: 20px;
+            background-color: transparent;
+            border: 0;
+            border-radius: 0;
+            cursor: none;
+        }
+    }
+
+    #home-content-right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        img{
+            width: 100dvw;
+            aspect-ratio: 1/1;
+            object-fit: contain;
+            object-position:top center;
+        }
+    }
+
+    @media screen and (max-width: 660px) {
+        flex-direction: column;
+        #home-content-left{
+            width: 100%;
+            h1{
+                width: 75%;
+            }
+
+        }
+        #home-content-right{
+            height: fit-content;
+            aspect-ratio: 1/1;
+            img{
+                object-fit:scale-down;
+                object-position:center 10px;
+            }
+        }
+    }
+}
+
+.mouse-position{
+    position: absolute !important;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%); 
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    
+    &.hidden {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px);
+    }
+    
+    &.visible {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}

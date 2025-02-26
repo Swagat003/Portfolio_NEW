@@ -1,0 +1,30 @@
+.mouse{
+    width: 35px;
+    height: 60px;
+    border: 2px solid var(--primary-color);
+    border-radius: 60px;
+    overflow: hidden;
+    position: relative;
+
+    ::before{
+        content: '';
+        width: 10px;
+        height: 10px;
+        background-color: var(--primary-color);
+        position: absolute;
+        top: 7px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 50%;
+        opacity: 1;
+        animation: wheel 1.5s infinite 0.3s;
+    }
+}
+
+@keyframes wheel {
+    to{
+        opacity: 0;
+        top: 40px;
+    }
+}
+
