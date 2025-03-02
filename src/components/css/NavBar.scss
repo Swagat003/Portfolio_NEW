@@ -1,0 +1,167 @@
+#navbar {
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 60px;
+    width: 60px;
+    z-index: 100;
+    background-color: rgba(191, 191, 191, 0.5);
+    background: linear-gradient(to right, rgb(191, 191, 191, 0.5) 70%, rgba(191, 191, 191, 0.5) 100%);
+
+    border-radius: 50%;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ul {
+        display: none;
+        opacity: 0;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        
+        li {
+            transform: translate(-100%, 50%);
+            margin: 10px 0;
+            font-size: 1rem;
+            font-weight: 600;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s;
+
+            &:hover {
+                color: var(--secondary-color);
+            }
+        }
+    }
+
+    #arrow {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 8px;
+        width: 8px;
+        transform: translate(50%, -50%) rotate(45deg);
+        border-top: 2px solid white;
+        border-right: 2px solid white;
+        animation: arrow 1s infinite ease-in;
+        background-color: transparent;
+        animation-direction: alternate;
+        transition: all 0.3s;
+    }
+
+    &:hover {
+        height: 100%;
+        width: 600px;
+        min-width: 600px;
+        border-radius: 0;
+        background: linear-gradient(to right, #000000 70%, #00000000 100%);
+
+        ul {
+            display: flex;
+            height: 80%;
+            flex-direction: column;
+            justify-content: space-evenly;
+            opacity: 1;
+        }
+
+        li{
+            animation: menu-in 0.5s forwards ease-in-out;
+            animation-delay: 0.3s;
+        }
+
+        #arrow {
+            animation: back-arrow 1s infinite ease-in;
+            animation-direction: normal;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            opacity: 0;
+        }
+    }
+
+    @media screen and (max-width: 670px) {
+        left: 100%;
+        height: 40px;
+        width: 40px;
+        background: linear-gradient(to left, rgb(191, 191, 191, 0.5) 70%, rgba(191, 191, 191, 0.5) 100%);
+
+        #arrow {
+            transform: translate(-130%, -50%) rotate(225deg);
+            animation: reverse-arrow 1s infinite ease-in;
+            animation-direction: alternate;
+        }
+
+        ul{
+            li{
+                transform: translate(100%, 50%);
+            }
+        }
+
+        &:hover {
+            width: 50dvw !important;
+            max-width: 50dvw !important;
+            background: linear-gradient(to left, #000000 70%, #00000000 100%) !important;
+
+            #arrow {
+                animation: reverse-back-arrow 1s infinite ease-in;
+                animation-direction: normal;
+                animation-iteration-count: 1;
+                animation-fill-mode: forwards;
+                opacity: 0;
+            }
+
+            ul{
+                li{
+                    animation: reverse-menu-in 0.5s forwards ease-in-out;
+                    animation-delay: 0.3s;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 450px) {
+        &:hover{
+            width: 100% !important;
+            max-width: 200px !important;
+            min-width: 400px !important;
+        }
+    }
+}
+
+@keyframes arrow {
+    to {
+        transform: translate(90%, -50%) rotate(45deg);
+    }
+}
+
+@keyframes reverse-arrow {
+    to {
+        transform: translate(-170%, -50%) rotate(225deg);
+    }
+
+}
+
+@keyframes back-arrow {
+    to {
+        transform: translate(-100px, -50%) rotate(0);
+    }
+}
+
+@keyframes reverse-back-arrow {
+    to {
+        transform: translate(100px, -50%) rotate(0);
+    }
+}
+
+@keyframes menu-in {
+    to {
+        transform: translate(100%, 50%);
+    }
+}
+@keyframes reverse-menu-in {
+    to {
+        transform: translate(-100%, 50%);
+    }
+}
