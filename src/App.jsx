@@ -19,7 +19,6 @@ function App() {
   const aboutXTransform = useTransform(aboutScroll.scrollYProgress, [0, 0.5], ["calc(150vw - 0% + 1rem)", "calc(50vw - 50% + 1rem)"]);
   const aboutScaleTransform = useTransform(aboutScroll.scrollYProgress, [0.5, 1], [1, 4]);
   const aboutOpacityTransform = useTransform(aboutScroll.scrollYProgress, [0.5, 0.96], [1, 0]);
-  // const aboutLetterSpacingTransform = useTransform(aboutScroll.scrollYProgress, [0.5, 1], ["2rem", "20rem"]);
 
 
   return (
@@ -34,9 +33,8 @@ function App() {
               y:"-50%",
               x: aboutXTransform,
               scale: aboutScaleTransform,
-              // textAlign: "left",
+              textAlign: "center",
               opacity: aboutOpacityTransform,
-              // letterSpacing: aboutLetterSpacingTransform
             }}
           >
             ABOUT
