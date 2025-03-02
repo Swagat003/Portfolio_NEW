@@ -30,7 +30,7 @@ function App() {
           <motion.h1
             className="about-title"
             style={{
-              y:"-50%",
+              y: "-50%",
               x: aboutXTransform,
               scale: aboutScaleTransform,
               textAlign: "center",
