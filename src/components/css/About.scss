@@ -1,13 +1,26 @@
-#about::before{
+#about::before {
     content: "";
     position: absolute;
     z-index: -1;
     width: 100%;
     height: 100dvh;
-    background:url(../images/bg-5.png);
-    background-position:right;
+    background: url(../images/bg-5.png);
+    background-position: right;
     background-size: cover;
     filter: grayscale(1) brightness(0) contrast(1) invert(1) hue-rotate(193deg) sepia(1);
     background-repeat: no-repeat;
     opacity: 0.05;
+}
+
+.about-title {
+    position: fixed;
+    top: 50%;
+    font-size: 14rem; // Large text
+    font-weight: 1000;
+    letter-spacing: 2rem;
+    color: white;
+    mix-blend-mode:color; // Blend effect
+    text-transform: uppercase;
+    white-space: nowrap;
+    z-index: 1;
 }

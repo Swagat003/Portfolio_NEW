@@ -1,13 +1,14 @@
-import React from 'react'
-import './css/About.scss'
+import React, { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import './css/About.scss';
 
 function About() {
+
   return (
     <>
-      About, Go to 
-      <a href="#skills"> skills</a>
+      About
     </>
-  )
+  );
 }
 
-export default About
+export default About;

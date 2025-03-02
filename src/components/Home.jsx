@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import './css/Home.scss'
-import { motion, useScroll } from 'motion/react'
+import { motion, useScroll, useTransform } from 'motion/react'
 import Blob from './Blob'
 import PathDrawing from './PathDrawing'
 import ShinyText from './ShinyText'
@@ -15,7 +15,20 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 
-function Home() {
+function Home({ refid }) {
+  const homeScroll = useScroll({
+    target: refid,
+    offset: ["start start", "end start"]
+  });
+  
+
+  const xTransform = useTransform(homeScroll.scrollYProgress, [0, 1], ["0dvw", "-200vw"])
+  const xTransformReverse = useTransform(homeScroll.scrollYProgress, [0, 1], ["0dvw", "200dvw"])
+  const opacityTransform = useTransform(homeScroll.scrollYProgress, [0, 1], [1, 0])
+
+
+
+
   const variants = {
     initial: {
       opacity: 0,
@@ -94,6 +107,7 @@ function Home() {
             variants={variants}
             initial='initial'
             animate='animate'
+            style={{ x: xTransform, opacity: opacityTransform }}
           >
             <motion.h1
               variants={variants}
@@ -129,12 +143,14 @@ function Home() {
           <motion.div id="home-content-right" className='image'
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0, transition: { duration: 1, delay: 1 } }}
+            style={{ x: xTransformReverse, opacity: opacityTransform }}
           >
             <img
               loading='lazy'
               src="./images/hero.png" alt="hero" width={'512px'} height={'512px'} />
           </motion.div>
         </div>
+
         <Mouse className='mouse-position' />
       </div>
     </>
