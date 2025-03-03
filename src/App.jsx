@@ -28,7 +28,7 @@ function App() {
   }, []);
 
   const aboutXTransform = isMobile
-    ? useTransform(aboutScroll.scrollYProgress, [0, 1], ["calc(150vw - 0% + 1rem)", "calc(0vw - 00% - 1rem)"])
+    ? useTransform(aboutScroll.scrollYProgress, [0, 1], ["calc(150vw - 0% + 1rem)", "calc(0vw - 100% - 1rem)"])
     : useTransform(aboutScroll.scrollYProgress, [0, 0.5], ["calc(150vw - 0% + 1rem)", "calc(50vw - 50% + 1rem)"]);
 
 
