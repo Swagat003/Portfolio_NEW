@@ -7,8 +7,8 @@ function NavBar() {
     <>
       <div id='navbar'>
         <ul>
-            <li><a href="#home-scroll-bg">Home</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="#home-bg">Home</a></li>
+            <li><a href="#about-bg">About</a></li>
             <li><a href="#project">Project</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#contact">Contact</a></li>

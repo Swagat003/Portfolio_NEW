@@ -12,21 +12,12 @@
         height: 10px;
         background-color: var(--primary-color);
         position: absolute;
-        top: 7px;
+        top: 40px;
         left: 50%;
         transform: translateX(-50%);
         border-radius: 50%;
         opacity: 1;
-        animation: wheel 1.5s infinite 0.3s;
-    }
-
-    @media screen and (max-width: 670px) {
-
-        ::before{
-            top: 40px;
-            animation: reverse-wheel 1.5s infinite 0.3s;
-        }
-        
+        animation: reverse-wheel 2.5s infinite 0.3s;
     }
 }
 
@@ -36,6 +27,7 @@
         top: 40px;
     }
 }
+
 @keyframes reverse-wheel {
     to{
         opacity: 0;

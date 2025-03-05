@@ -1,10 +1,8 @@
 html {
-    // scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
 }
 
 section {
-    // scroll-snap-align: start;
     min-height: 100dvh;
 }
 
@@ -13,15 +11,13 @@ section {
     width: 100%;
     padding: 0 20px;
     max-width: 1200px;
-    // overflow: hidden;
 }
 
-#home-scroll-bg{
+.scroll-bg{
     height: 400vh;
-    // overflow: hidden;
 }
 
-#home{
+.scroll-container{
     position: sticky;
     overflow: hidden;
     top: 0;
