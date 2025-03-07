@@ -14,8 +14,8 @@ function App() {
       <NavBar />
       <Home />
       <About />
-      <section className='bg' id='project'>Projects</section>
       <section className='bg' id='skills'>Skills</section>
+      <section className='bg' id='project'>Projects</section>
       <section className='bg' id='contact'>Contact</section>
       <section className='bg' id='snaps'>Snaps</section>
     </>
