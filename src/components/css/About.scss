@@ -71,6 +71,7 @@
 
             .about-text-box-right {
                 position: relative;
+
                 h3 {
                     overflow-wrap: break-word;
                     text-wrap: normal;
@@ -85,6 +86,7 @@
                 position: relative;
                 display: flex;
                 flex-flow: column;
+
                 // gap: 2rem;
                 // height: 4rem;
                 p {
@@ -135,6 +137,133 @@
                     }
                 }
             }
+        }
+
+    }
+}
+
+#skill-title-container-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100dvh;
+    overflow: hidden;
+    z-index: 3;
+
+    #skill-title-container {
+        position: relative;
+        height: 100dvh;
+        width: 100dvw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--primary-color);
+        color: var(--bg-color);
+
+        .square {
+            background-color: var(--bg-color);
+            position: absolute;
+        }
+
+        svg {
+            fill: var(--bg-color);
+        }
+
+        .triangle {
+            position: absolute;
+        }
+
+        #Layer-1 {
+            position: absolute;
+            height: 100dvh;
+            width: 100dvw;
+            .blur {
+                filter: blur(1px);
+            }
+            .size{
+                height: 30px;
+                width: 30px;
+            }
+            #sqr-1-1 {
+                bottom: 5vh;
+                right: 5vw;
+            }
+            #trg-1-1 {
+                top: 5vh;
+                left: 5vw;
+            }
+            #sqr-1-2 {
+                top: 15vh;
+                left: 50vw;
+            }
+            #trg-1-2 {
+                bottom: 50vh;
+                right: 10vw;
+            }
+            #trg-1-3 {
+                bottom: -10vh;
+                left: 40vw;
+            }
+        }
+
+        #Layer-2 {
+            position: absolute;
+            height: 100dvh;
+            width: 100dvw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .size {
+                height: 100px;
+                width: 100px;
+            }
+            
+            #skill-title{
+                position: relative;
+                #sqr-2-1 {
+                    top: -100px;
+                    left: -50px;
+                }
+    
+                #trg-2-1 {
+                    bottom: -100px;
+                    right: 60px;
+                }
+            }
+            #sqr-2-2{
+                bottom: -200px;
+                left: 10vw;
+            }
+        }
+
+        #Layer-3 {
+            position: absolute;
+            height: 100dvh;
+            width: 100dvw;
+            top: 0;
+            .blur {
+                filter: blur(4px);
+            }
+            .size {
+                height: 200px;
+                width: 200px;
+            }
+            #sqr-3-1 {
+                top: -40px;
+                right: -50px;
+            }
+
+            #trg-3-1 {
+                bottom: -80px;
+                left: -50px;
+            }
+
+            #trg-3-2 {
+                bottom: -700px;
+                right: 30px;
+            }
+
         }
 
     }

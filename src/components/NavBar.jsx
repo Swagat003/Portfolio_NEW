@@ -9,8 +9,8 @@ function NavBar() {
         <ul>
             <li><a href="#home-bg">Home</a></li>
             <li><a href="#about-bg">About</a></li>
-            <li><a href="#project">Project</a></li>
             <li><a href="#skills">Skills</a></li>
+            <li><a href="#project">Project</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="#snaps">Snaps</a></li>
         </ul>
