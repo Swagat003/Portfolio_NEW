@@ -12,7 +12,6 @@ function About() {
   });
 
   const bgWidth = useTransform(aboutScroll.scrollYProgress, [0.6, 0.75], ["0dvw", "100dvw"]);
-  const layer0Scroll = useTransform(aboutScroll.scrollYProgress, [0.75, 1], ["0%", "-100%"]);
   const layer1Scroll = useTransform(aboutScroll.scrollYProgress, [0.75, 1], ["0%", "-105%"]);
   const layer2Scroll = useTransform(aboutScroll.scrollYProgress, [0.75, 1], ["0%", "-200%"]);
   const layer3Scroll = useTransform(aboutScroll.scrollYProgress, [0.75, 1], ["0%", "-600%"]);
@@ -45,7 +44,6 @@ function About() {
           <motion.div id="skill-title-container-bg"
             style={{
               width: bgWidth,
-              y: layer0Scroll,
             }}
           >
             <div id="skill-title-container">
