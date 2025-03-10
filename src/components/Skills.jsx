@@ -1,8 +1,11 @@
-import React, { useEffect, useState , useRef} from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import './css/Skills.scss'
 import CountUp from './CountUp';
 import { motion, useScroll, useTransform, useInView, useMotionValueEvent } from 'motion/react';
 import { animate, delay } from 'motion';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+
 
 function Skills() {
     const [totalLeet, setTotalLeet] = useState(0);
@@ -105,32 +108,16 @@ function Skills() {
         visible: { opacity: 1, transition: { duration: 0.5 } }
     };
 
+    const containerRefLang = useRef(null);
+    const containerRefTech = useRef(null);
     const containerRef = useRef(null);
-    const [constraints, setConstraints] = useState({ left: 0, right: 0, top: 0, bottom: 0 });
-    useEffect(() => {
-        const updateConstraints = () => {
-            if (containerRef.current) {
-                const { width, height } = containerRef.current.getBoundingClientRect();
-                setConstraints({
-                    left: -width / 2,
-                    right: width / 2,
-                    top: -height / 2,
-                    bottom: height / 2,
-                });
-            }
-        };
 
-        updateConstraints();
-        window.addEventListener("resize", updateConstraints);
-
-        return () => window.removeEventListener("resize", updateConstraints);
-    }, []);
 
 
     return (
         <>
             <div className="scroll-bg">
-                <section className='bg scroll-container' id='skills'>
+                <section className='bg scroll-container' id='skills' ref={containerRef}>
                     <div class="custom-shape-divider-top-1741456221">
                         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                             <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
@@ -140,7 +127,7 @@ function Skills() {
                     </div>
                     <div className="skills container">
                         <div id="skills-top">
-                            <div id="languages-container" ref={containerRef}>
+                            <div id="languages-container" ref={containerRefLang}>
                                 <h1>Languages</h1>
                                 <motion.div id="languages"
                                     variants={containerVariants}
@@ -152,7 +139,6 @@ function Skills() {
 
                                         <motion.img src="./images/cpp.png" alt="cpp" height={128}
                                             variants={floating}
-                                            // initial={false}
                                             animate="animate"
                                             whileHover={{
                                                 scale: 1.2,
@@ -161,14 +147,19 @@ function Skills() {
                                                 }
                                             }}
                                             drag
-                                            dragConstraints={constraints}
+                                            dragConstraints={containerRefLang}
+                                            whileDrag={{
+                                                filter: "drop-shadow(0px 0px 7px white)",
+                                                transition: {
+                                                    duration: 0.5,
+                                                }
+                                            }}
                                         />
                                     </motion.div>
                                     <div class="empty"></div>
                                     <motion.div variants={itemVariants}>
                                         <motion.img
                                             variants={floating2}
-                                            // initial={false}
                                             animate="animate"
                                             whileHover={{
                                                 scale: 1.2,
@@ -177,14 +168,19 @@ function Skills() {
                                                 }
                                             }}
                                             drag
-                                            dragConstraints={constraints}
+                                            dragConstraints={containerRefLang}
+                                            whileDrag={{
+                                                filter: "drop-shadow(0px 0px 7px white)",
+                                                transition: {
+                                                    duration: 0.5,
+                                                }
+                                            }}
                                             src="./images/java.png" alt="java" height={128} />
                                     </motion.div>
                                     <div class="empty"></div>
                                     <motion.div variants={itemVariants}>
                                         <motion.img
                                             variants={floating3}
-                                            // initial={false}
                                             animate="animate"
                                             whileHover={{
                                                 scale: 1.2,
@@ -193,7 +189,13 @@ function Skills() {
                                                 }
                                             }}
                                             drag
-                                            dragConstraints={constraints}
+                                            dragConstraints={containerRefLang}
+                                            whileDrag={{
+                                                filter: "drop-shadow(0px 0px 7px white)",
+                                                transition: {
+                                                    duration: 0.5,
+                                                }
+                                            }}
                                             src="./images/js.png" alt="js" height={128} />
                                     </motion.div>
 
@@ -201,7 +203,6 @@ function Skills() {
                                     <motion.div variants={itemVariants}>
                                         <motion.img
                                             variants={floating4}
-                                            // initial={false}
                                             animate="animate"
                                             whileHover={{
                                                 scale: 1.2,
@@ -210,14 +211,19 @@ function Skills() {
                                                 }
                                             }}
                                             drag
-                                            dragConstraints={constraints}
+                                            dragConstraints={containerRefLang}
+                                            whileDrag={{
+                                                filter: "drop-shadow(0px 0px 7px white)",
+                                                transition: {
+                                                    duration: 0.5,
+                                                }
+                                            }}
                                             src="./images/html.png" alt="html" height={128} />
                                     </motion.div>
                                     <div class="empty"></div>
                                     <motion.div variants={itemVariants}>
                                         <motion.img
                                             variants={floating}
-                                            // initial={false}
                                             animate="animate"
                                             whileHover={{
                                                 scale: 1.2,
@@ -226,14 +232,19 @@ function Skills() {
                                                 }
                                             }}
                                             drag
-                                            dragConstraints={constraints}
+                                            dragConstraints={containerRefLang}
+                                            whileDrag={{
+                                                filter: "drop-shadow(0px 0px 7px white)",
+                                                transition: {
+                                                    duration: 0.5,
+                                                }
+                                            }}
                                             src="./images/css.png" alt="css" height={128} />
                                     </motion.div>
                                     <div class="empty"></div>
                                     <motion.div variants={itemVariants}>
                                         <motion.img
                                             variants={floating3}
-                                            // initial={false}
                                             animate="animate"
                                             whileHover={{
                                                 scale: 1.2,
@@ -242,13 +253,19 @@ function Skills() {
                                                 }
                                             }}
                                             drag
-                                            dragConstraints={constraints}
+                                            dragConstraints={containerRefLang}
+                                            whileDrag={{
+                                                filter: "drop-shadow(0px 0px 7px white)",
+                                                transition: {
+                                                    duration: 0.5,
+                                                }
+                                            }}
                                             src="./images/python.png" alt="python" height={128} />
                                     </motion.div>
                                     <div class="empty"></div>
                                 </motion.div>
                             </div>
-                            <div id="technologies-container">
+                            <div id="technologies-container" ref={containerRefTech}>
                                 <h1>Technologies</h1>
                                 <motion.div id="technologies"
                                     variants={containerVariants}
@@ -259,7 +276,6 @@ function Skills() {
                                     <motion.div variants={itemVariants}>
                                         <motion.img
                                             variants={floating2}
-                                            // initial={false}
                                             animate="animate"
                                             whileHover={{
                                                 scale: 1.2,
@@ -268,14 +284,19 @@ function Skills() {
                                                 }
                                             }}
                                             drag
-                                            dragConstraints={constraints}
+                                            dragConstraints={containerRefTech}
+                                            whileDrag={{
+                                                filter: "drop-shadow(0px 0px 7px white)",
+                                                transition: {
+                                                    duration: 0.5,
+                                                }
+                                            }}
                                             src="./images/mongoDB.png" alt="mongodb" height={128} />
                                     </motion.div>
                                     <div class="empty"></div>
                                     <motion.div variants={itemVariants}>
                                         <motion.img
                                             variants={floating4}
-                                            // initial={false}
                                             animate="animate"
                                             whileHover={{
                                                 scale: 1.2,
@@ -284,14 +305,19 @@ function Skills() {
                                                 }
                                             }}
                                             drag
-                                            dragConstraints={constraints}
+                                            dragConstraints={containerRefTech}
+                                            whileDrag={{
+                                                filter: "drop-shadow(0px 0px 7px white)",
+                                                transition: {
+                                                    duration: 0.5,
+                                                }
+                                            }}
                                             src="./images/express.png" alt="express" height={128} />
                                     </motion.div>
                                     <div class="empty"></div>
                                     <motion.div variants={itemVariants}>
                                         <motion.img
                                             variants={floating}
-                                            // initial={false}
                                             animate="animate"
                                             whileHover={{
                                                 scale: 1.2,
@@ -300,7 +326,13 @@ function Skills() {
                                                 }
                                             }}
                                             drag
-                                            dragConstraints={constraints}
+                                            dragConstraints={containerRefTech}
+                                            whileDrag={{
+                                                filter: "drop-shadow(0px 0px 7px white)",
+                                                transition: {
+                                                    duration: 0.5,
+                                                }
+                                            }}
                                             src="./images/react.png" alt="react" height={128} />
                                     </motion.div>
 
@@ -308,7 +340,6 @@ function Skills() {
                                     <motion.div variants={itemVariants}>
                                         <motion.img
                                             variants={floating3}
-                                            // initial={false}
                                             animate="animate"
                                             whileHover={{
                                                 scale: 1.2,
@@ -317,14 +348,19 @@ function Skills() {
                                                 }
                                             }}
                                             drag
-                                            dragConstraints={constraints}
+                                            dragConstraints={containerRefTech}
+                                            whileDrag={{
+                                                filter: "drop-shadow(0px 0px 7px white)",
+                                                transition: {
+                                                    duration: 0.5,
+                                                }
+                                            }}
                                             src="./images/node.png" alt="nodejs" height={128} />
                                     </motion.div>
                                     <div class="empty"></div>
                                     <motion.div variants={itemVariants}>
                                         <motion.img
                                             variants={floating2}
-                                            // initial={false}
                                             animate="animate"
                                             whileHover={{
                                                 scale: 1.2,
@@ -333,7 +369,13 @@ function Skills() {
                                                 }
                                             }}
                                             drag
-                                            dragConstraints={constraints}
+                                            dragConstraints={containerRefTech}
+                                            whileDrag={{
+                                                filter: "drop-shadow(0px 0px 7px white)",
+                                                transition: {
+                                                    duration: 0.5,
+                                                }
+                                            }}
                                             src="./images/MySQL.png" alt="MySQL" height={128} />
                                     </motion.div>
                                     <div class="empty"></div>
@@ -341,7 +383,6 @@ function Skills() {
                                     <motion.div variants={itemVariants}>
                                         <motion.img
                                             variants={floating}
-                                            // initial={false}
                                             animate="animate"
                                             whileHover={{
                                                 scale: 1.2,
@@ -350,14 +391,19 @@ function Skills() {
                                                 }
                                             }}
                                             drag
-                                            dragConstraints={constraints}
+                                            dragConstraints={containerRefTech}
+                                            whileDrag={{
+                                                filter: "drop-shadow(0px 0px 7px white)",
+                                                transition: {
+                                                    duration: 0.5,
+                                                }
+                                            }}
                                             src="./images/docker.png" alt="docker" height={128} />
                                     </motion.div>
                                     <div class="empty"></div>
                                     <motion.div variants={itemVariants}>
                                         <motion.img
                                             variants={floating4}
-                                            // initial={false}
                                             animate="animate"
                                             whileHover={{
                                                 scale: 1.2,
@@ -366,14 +412,19 @@ function Skills() {
                                                 }
                                             }}
                                             drag
-                                            dragConstraints={constraints}
+                                            dragConstraints={containerRefTech}
+                                            whileDrag={{
+                                                filter: "drop-shadow(0px 0px 7px white)",
+                                                transition: {
+                                                    duration: 0.5,
+                                                }
+                                            }}
                                             src="./images/git.png" alt="git" height={128} />
                                     </motion.div>
                                     <div class="empty"></div>
                                     <motion.div variants={itemVariants}>
                                         <motion.img
                                             variants={floating3}
-                                            // initial={false}
                                             animate="animate"
                                             whileHover={{
                                                 scale: 1.2,
@@ -382,7 +433,13 @@ function Skills() {
                                                 }
                                             }}
                                             drag
-                                            dragConstraints={constraints}
+                                            dragConstraints={containerRefTech}
+                                            whileDrag={{
+                                                filter: "drop-shadow(0px 0px 7px white) invert(0)",
+                                                transition: {
+                                                    duration: 0.5,
+                                                }
+                                            }}
                                             src="./images/vercel.png" alt="vercel" height={128} style={{ filter: "invert(1)" }} />
                                     </motion.div>
                                 </motion.div>
@@ -399,7 +456,10 @@ function Skills() {
                                     className="count"
                                 />
                                 <p>
-                                    Total Leetcode Problems Solved
+                                    Total Leetcode Problems Solved {" "}
+                                    <a href="https://leetcode.com/u/Swagat003/" target="_blank" rel="noopener noreferrer">
+                                        <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                                    </a>
                                 </p>
                             </div>
                             <div id="horizontal-line"></div>
@@ -413,7 +473,10 @@ function Skills() {
                                     className="count"
                                 />
                                 <p>
-                                    Total Projects on Github
+                                    Total Projects on Github {" "}
+                                    <a href="https://github.com/Swagat003?tab=repositories" target="_blank" rel="noopener noreferrer">
+                                        <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                                    </a>
                                 </p>
                             </div>
                         </div>
