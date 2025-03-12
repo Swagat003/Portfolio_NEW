@@ -40,13 +40,47 @@
 
             img {
                 height: clamp(6vh, 5vw, 60px);
-                filter: drop-shadow(0px 0px 0px transparent);
             }
-
+            
             .empty {
                 width: clamp(5vh, 5vw, 60px);
                 height: clamp(5vh, 5vw, 60px);
                 background-color: transparent;
+            }
+            
+            .code-container{
+                position: relative;
+                height:clamp(6vh, 5vw, 60px) ;
+                width: clamp(6vh, 5vw, 60px);
+                filter: drop-shadow(0px 0px 0px transparent);
+                &:hover{
+                    .code-name-container{
+                        opacity: 1;
+                    }
+                }
+                .code-name-container{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(0, -50%);
+                    z-index: 1;
+                    opacity: 0;
+                    transition: opacity 1s;
+                    
+                    svg{
+                        transform: translate(10%, -30%);
+                    }
+
+                    p{
+                        position: absolute;
+                        top: -17.5px;
+                        left: 60px;
+                        font-size: 0.9rem;
+                        font-weight: 500;
+                        color: var(--primary-color);
+                        margin-left: 10px;
+                    }   
+                }
             }
 
             display: flex;

@@ -135,8 +135,24 @@ function Skills() {
                                     whileInView="visible"
                                     viewport={{ once: true, amount: 0.3 }}
                                 >
-                                    <motion.div variants={itemVariants}>
-
+                                    <motion.div variants={itemVariants} className='code-container'
+                                        drag
+                                        dragConstraints={containerRefLang}
+                                        whileDrag={{
+                                            filter: "drop-shadow(0px 0px 7px white)",
+                                            transition: {
+                                                duration: 0.5,
+                                            }
+                                        }}
+                                    >
+                                        <div className="code-name-container">
+                                            <svg width="60" height="31" viewBox="0 0 60 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="5" cy="26" r="4" stroke="#F3F3F3" stroke-width="2" />
+                                                <path d="M8.29291 22.5061L29.5061 1.2929" stroke="#F3F3F3" stroke-width="2" stroke-linecap="round" />
+                                                <path d="M30 0C29.4477 0 29 0.447715 29 1C29 1.55228 29.4477 2 30 2V0ZM30 2L60 2V0L30 0V2Z" fill="#F3F3F3" />
+                                            </svg>
+                                            <p>C++</p>
+                                        </div>
                                         <motion.img src="./images/cpp.png" alt="cpp" height={128}
                                             variants={floating}
                                             animate="animate"
@@ -146,18 +162,27 @@ function Skills() {
                                                     duration: 0.4
                                                 }
                                             }}
-                                            drag
-                                            dragConstraints={containerRefLang}
-                                            whileDrag={{
-                                                filter: "drop-shadow(0px 0px 7px white)",
-                                                transition: {
-                                                    duration: 0.5,
-                                                }
-                                            }}
                                         />
                                     </motion.div>
                                     <div class="empty"></div>
-                                    <motion.div variants={itemVariants}>
+                                    <motion.div variants={itemVariants} className='code-container'
+                                        drag
+                                        dragConstraints={containerRefLang}
+                                        whileDrag={{
+                                            filter: "drop-shadow(0px 0px 7px white)",
+                                            transition: {
+                                                duration: 0.5,
+                                            }
+                                        }}
+                                    >
+                                        <div className="code-name-container">
+                                            <svg width="60" height="31" viewBox="0 0 60 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="5" cy="26" r="4" stroke="#F3F3F3" stroke-width="2" />
+                                                <path d="M8.29291 22.5061L29.5061 1.2929" stroke="#F3F3F3" stroke-width="2" stroke-linecap="round" />
+                                                <path d="M30 0C29.4477 0 29 0.447715 29 1C29 1.55228 29.4477 2 30 2V0ZM30 2L60 2V0L30 0V2Z" fill="#F3F3F3" />
+                                            </svg>
+                                            <p>JAVA</p>
+                                        </div>
                                         <motion.img
                                             variants={floating2}
                                             animate="animate"
@@ -167,18 +192,28 @@ function Skills() {
                                                     duration: 0.4
                                                 }
                                             }}
-                                            drag
-                                            dragConstraints={containerRefLang}
-                                            whileDrag={{
-                                                filter: "drop-shadow(0px 0px 7px white)",
-                                                transition: {
-                                                    duration: 0.5,
-                                                }
-                                            }}
+
                                             src="./images/java.png" alt="java" height={128} />
                                     </motion.div>
                                     <div class="empty"></div>
-                                    <motion.div variants={itemVariants}>
+                                    <motion.div variants={itemVariants} className='code-container'
+                                        drag
+                                        dragConstraints={containerRefLang}
+                                        whileDrag={{
+                                            filter: "drop-shadow(0px 0px 7px white)",
+                                            transition: {
+                                                duration: 0.5,
+                                            }
+                                        }}
+                                    >
+                                        <div className="code-name-container">
+                                            <svg width="60" height="31" viewBox="0 0 60 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="5" cy="26" r="4" stroke="#F3F3F3" stroke-width="2" />
+                                                <path d="M8.29291 22.5061L29.5061 1.2929" stroke="#F3F3F3" stroke-width="2" stroke-linecap="round" />
+                                                <path d="M30 0C29.4477 0 29 0.447715 29 1C29 1.55228 29.4477 2 30 2V0ZM30 2L60 2V0L30 0V2Z" fill="#F3F3F3" />
+                                            </svg>
+                                            <p>JavaScript</p>
+                                        </div>
                                         <motion.img
                                             variants={floating3}
                                             animate="animate"
@@ -188,19 +223,29 @@ function Skills() {
                                                     duration: 0.4
                                                 }
                                             }}
-                                            drag
-                                            dragConstraints={containerRefLang}
-                                            whileDrag={{
-                                                filter: "drop-shadow(0px 0px 7px white)",
-                                                transition: {
-                                                    duration: 0.5,
-                                                }
-                                            }}
+
                                             src="./images/js.png" alt="js" height={128} />
                                     </motion.div>
 
                                     <div class="empty"></div>
-                                    <motion.div variants={itemVariants}>
+                                    <motion.div variants={itemVariants} className='code-container'
+                                        drag
+                                        dragConstraints={containerRefLang}
+                                        whileDrag={{
+                                            filter: "drop-shadow(0px 0px 7px white)",
+                                            transition: {
+                                                duration: 0.5,
+                                            }
+                                        }}
+                                    >
+                                        <div className="code-name-container">
+                                            <svg width="60" height="31" viewBox="0 0 60 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="5" cy="26" r="4" stroke="#F3F3F3" stroke-width="2" />
+                                                <path d="M8.29291 22.5061L29.5061 1.2929" stroke="#F3F3F3" stroke-width="2" stroke-linecap="round" />
+                                                <path d="M30 0C29.4477 0 29 0.447715 29 1C29 1.55228 29.4477 2 30 2V0ZM30 2L60 2V0L30 0V2Z" fill="#F3F3F3" />
+                                            </svg>
+                                            <p>HTML</p>
+                                        </div>
                                         <motion.img
                                             variants={floating4}
                                             animate="animate"
@@ -210,18 +255,28 @@ function Skills() {
                                                     duration: 0.4
                                                 }
                                             }}
-                                            drag
-                                            dragConstraints={containerRefLang}
-                                            whileDrag={{
-                                                filter: "drop-shadow(0px 0px 7px white)",
-                                                transition: {
-                                                    duration: 0.5,
-                                                }
-                                            }}
+
                                             src="./images/html.png" alt="html" height={128} />
                                     </motion.div>
                                     <div class="empty"></div>
-                                    <motion.div variants={itemVariants}>
+                                    <motion.div variants={itemVariants} className='code-container'
+                                        drag
+                                        dragConstraints={containerRefLang}
+                                        whileDrag={{
+                                            filter: "drop-shadow(0px 0px 7px white)",
+                                            transition: {
+                                                duration: 0.5,
+                                            }
+                                        }}
+                                    >
+                                        <div className="code-name-container">
+                                            <svg width="60" height="31" viewBox="0 0 60 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="5" cy="26" r="4" stroke="#F3F3F3" stroke-width="2" />
+                                                <path d="M8.29291 22.5061L29.5061 1.2929" stroke="#F3F3F3" stroke-width="2" stroke-linecap="round" />
+                                                <path d="M30 0C29.4477 0 29 0.447715 29 1C29 1.55228 29.4477 2 30 2V0ZM30 2L60 2V0L30 0V2Z" fill="#F3F3F3" />
+                                            </svg>
+                                            <p>CSS</p>
+                                        </div>
                                         <motion.img
                                             variants={floating}
                                             animate="animate"
@@ -231,18 +286,28 @@ function Skills() {
                                                     duration: 0.4
                                                 }
                                             }}
-                                            drag
-                                            dragConstraints={containerRefLang}
-                                            whileDrag={{
-                                                filter: "drop-shadow(0px 0px 7px white)",
-                                                transition: {
-                                                    duration: 0.5,
-                                                }
-                                            }}
+
                                             src="./images/css.png" alt="css" height={128} />
                                     </motion.div>
                                     <div class="empty"></div>
-                                    <motion.div variants={itemVariants}>
+                                    <motion.div variants={itemVariants} className='code-container'
+                                        drag
+                                        dragConstraints={containerRefLang}
+                                        whileDrag={{
+                                            filter: "drop-shadow(0px 0px 7px white)",
+                                            transition: {
+                                                duration: 0.5,
+                                            }
+                                        }}
+                                    >
+                                        <div className="code-name-container">
+                                            <svg width="60" height="31" viewBox="0 0 60 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="5" cy="26" r="4" stroke="#F3F3F3" stroke-width="2" />
+                                                <path d="M8.29291 22.5061L29.5061 1.2929" stroke="#F3F3F3" stroke-width="2" stroke-linecap="round" />
+                                                <path d="M30 0C29.4477 0 29 0.447715 29 1C29 1.55228 29.4477 2 30 2V0ZM30 2L60 2V0L30 0V2Z" fill="#F3F3F3" />
+                                            </svg>
+                                            <p>Python</p>
+                                        </div>
                                         <motion.img
                                             variants={floating3}
                                             animate="animate"
@@ -252,14 +317,7 @@ function Skills() {
                                                     duration: 0.4
                                                 }
                                             }}
-                                            drag
-                                            dragConstraints={containerRefLang}
-                                            whileDrag={{
-                                                filter: "drop-shadow(0px 0px 7px white)",
-                                                transition: {
-                                                    duration: 0.5,
-                                                }
-                                            }}
+
                                             src="./images/python.png" alt="python" height={128} />
                                     </motion.div>
                                     <div class="empty"></div>
@@ -273,7 +331,24 @@ function Skills() {
                                     whileInView="visible"
                                     viewport={{ once: true, amount: 0.3 }}
                                 >
-                                    <motion.div variants={itemVariants}>
+                                    <motion.div variants={itemVariants} className='code-container'
+                                        drag
+                                        dragConstraints={containerRefTech}
+                                        whileDrag={{
+                                            filter: "drop-shadow(0px 0px 7px white)",
+                                            transition: {
+                                                duration: 0.5,
+                                            }
+                                        }}
+                                    >
+                                        <div className="code-name-container">
+                                            <svg width="60" height="31" viewBox="0 0 60 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="5" cy="26" r="4" stroke="#F3F3F3" stroke-width="2" />
+                                                <path d="M8.29291 22.5061L29.5061 1.2929" stroke="#F3F3F3" stroke-width="2" stroke-linecap="round" />
+                                                <path d="M30 0C29.4477 0 29 0.447715 29 1C29 1.55228 29.4477 2 30 2V0ZM30 2L60 2V0L30 0V2Z" fill="#F3F3F3" />
+                                            </svg>
+                                            <p>MongoDB</p>
+                                        </div>
                                         <motion.img
                                             variants={floating2}
                                             animate="animate"
@@ -283,18 +358,28 @@ function Skills() {
                                                     duration: 0.4
                                                 }
                                             }}
-                                            drag
-                                            dragConstraints={containerRefTech}
-                                            whileDrag={{
-                                                filter: "drop-shadow(0px 0px 7px white)",
-                                                transition: {
-                                                    duration: 0.5,
-                                                }
-                                            }}
+
                                             src="./images/mongoDB.png" alt="mongodb" height={128} />
                                     </motion.div>
                                     <div class="empty"></div>
-                                    <motion.div variants={itemVariants}>
+                                    <motion.div variants={itemVariants} className='code-container'
+                                        drag
+                                        dragConstraints={containerRefTech}
+                                        whileDrag={{
+                                            filter: "drop-shadow(0px 0px 7px white)",
+                                            transition: {
+                                                duration: 0.5,
+                                            }
+                                        }}
+                                    >
+                                        <div className="code-name-container">
+                                            <svg width="60" height="31" viewBox="0 0 60 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="5" cy="26" r="4" stroke="#F3F3F3" stroke-width="2" />
+                                                <path d="M8.29291 22.5061L29.5061 1.2929" stroke="#F3F3F3" stroke-width="2" stroke-linecap="round" />
+                                                <path d="M30 0C29.4477 0 29 0.447715 29 1C29 1.55228 29.4477 2 30 2V0ZM30 2L60 2V0L30 0V2Z" fill="#F3F3F3" />
+                                            </svg>
+                                            <p>Express</p>
+                                        </div>
                                         <motion.img
                                             variants={floating4}
                                             animate="animate"
@@ -304,18 +389,28 @@ function Skills() {
                                                     duration: 0.4
                                                 }
                                             }}
-                                            drag
-                                            dragConstraints={containerRefTech}
-                                            whileDrag={{
-                                                filter: "drop-shadow(0px 0px 7px white)",
-                                                transition: {
-                                                    duration: 0.5,
-                                                }
-                                            }}
+
                                             src="./images/express.png" alt="express" height={128} />
                                     </motion.div>
                                     <div class="empty"></div>
-                                    <motion.div variants={itemVariants}>
+                                    <motion.div variants={itemVariants} className='code-container'
+                                        drag
+                                        dragConstraints={containerRefTech}
+                                        whileDrag={{
+                                            filter: "drop-shadow(0px 0px 7px white)",
+                                            transition: {
+                                                duration: 0.5,
+                                            }
+                                        }}
+                                    >
+                                        <div className="code-name-container">
+                                            <svg width="60" height="31" viewBox="0 0 60 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="5" cy="26" r="4" stroke="#F3F3F3" stroke-width="2" />
+                                                <path d="M8.29291 22.5061L29.5061 1.2929" stroke="#F3F3F3" stroke-width="2" stroke-linecap="round" />
+                                                <path d="M30 0C29.4477 0 29 0.447715 29 1C29 1.55228 29.4477 2 30 2V0ZM30 2L60 2V0L30 0V2Z" fill="#F3F3F3" />
+                                            </svg>
+                                            <p>React</p>
+                                        </div>
                                         <motion.img
                                             variants={floating}
                                             animate="animate"
@@ -325,19 +420,29 @@ function Skills() {
                                                     duration: 0.4
                                                 }
                                             }}
-                                            drag
-                                            dragConstraints={containerRefTech}
-                                            whileDrag={{
-                                                filter: "drop-shadow(0px 0px 7px white)",
-                                                transition: {
-                                                    duration: 0.5,
-                                                }
-                                            }}
+
                                             src="./images/react.png" alt="react" height={128} />
                                     </motion.div>
 
                                     <div class="empty"></div>
-                                    <motion.div variants={itemVariants}>
+                                    <motion.div variants={itemVariants} className='code-container'
+                                        drag
+                                        dragConstraints={containerRefTech}
+                                        whileDrag={{
+                                            filter: "drop-shadow(0px 0px 7px white)",
+                                            transition: {
+                                                duration: 0.5,
+                                            }
+                                        }}
+                                    >
+                                        <div className="code-name-container">
+                                            <svg width="60" height="31" viewBox="0 0 60 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="5" cy="26" r="4" stroke="#F3F3F3" stroke-width="2" />
+                                                <path d="M8.29291 22.5061L29.5061 1.2929" stroke="#F3F3F3" stroke-width="2" stroke-linecap="round" />
+                                                <path d="M30 0C29.4477 0 29 0.447715 29 1C29 1.55228 29.4477 2 30 2V0ZM30 2L60 2V0L30 0V2Z" fill="#F3F3F3" />
+                                            </svg>
+                                            <p>NodeJS</p>
+                                        </div>
                                         <motion.img
                                             variants={floating3}
                                             animate="animate"
@@ -347,18 +452,28 @@ function Skills() {
                                                     duration: 0.4
                                                 }
                                             }}
-                                            drag
-                                            dragConstraints={containerRefTech}
-                                            whileDrag={{
-                                                filter: "drop-shadow(0px 0px 7px white)",
-                                                transition: {
-                                                    duration: 0.5,
-                                                }
-                                            }}
+
                                             src="./images/node.png" alt="nodejs" height={128} />
                                     </motion.div>
                                     <div class="empty"></div>
-                                    <motion.div variants={itemVariants}>
+                                    <motion.div variants={itemVariants} className='code-container'
+                                        drag
+                                        dragConstraints={containerRefTech}
+                                        whileDrag={{
+                                            filter: "drop-shadow(0px 0px 7px white)",
+                                            transition: {
+                                                duration: 0.5,
+                                            }
+                                        }}
+                                    >
+                                        <div className="code-name-container">
+                                            <svg width="60" height="31" viewBox="0 0 60 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="5" cy="26" r="4" stroke="#F3F3F3" stroke-width="2" />
+                                                <path d="M8.29291 22.5061L29.5061 1.2929" stroke="#F3F3F3" stroke-width="2" stroke-linecap="round" />
+                                                <path d="M30 0C29.4477 0 29 0.447715 29 1C29 1.55228 29.4477 2 30 2V0ZM30 2L60 2V0L30 0V2Z" fill="#F3F3F3" />
+                                            </svg>
+                                            <p>MySQL</p>
+                                        </div>
                                         <motion.img
                                             variants={floating2}
                                             animate="animate"
@@ -368,19 +483,29 @@ function Skills() {
                                                     duration: 0.4
                                                 }
                                             }}
-                                            drag
-                                            dragConstraints={containerRefTech}
-                                            whileDrag={{
-                                                filter: "drop-shadow(0px 0px 7px white)",
-                                                transition: {
-                                                    duration: 0.5,
-                                                }
-                                            }}
+
                                             src="./images/MySQL.png" alt="MySQL" height={128} />
                                     </motion.div>
                                     <div class="empty"></div>
 
-                                    <motion.div variants={itemVariants}>
+                                    <motion.div variants={itemVariants} className='code-container'
+                                        drag
+                                        dragConstraints={containerRefTech}
+                                        whileDrag={{
+                                            filter: "drop-shadow(0px 0px 7px white)",
+                                            transition: {
+                                                duration: 0.5,
+                                            }
+                                        }}
+                                    >
+                                        <div className="code-name-container">
+                                            <svg width="60" height="31" viewBox="0 0 60 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="5" cy="26" r="4" stroke="#F3F3F3" stroke-width="2" />
+                                                <path d="M8.29291 22.5061L29.5061 1.2929" stroke="#F3F3F3" stroke-width="2" stroke-linecap="round" />
+                                                <path d="M30 0C29.4477 0 29 0.447715 29 1C29 1.55228 29.4477 2 30 2V0ZM30 2L60 2V0L30 0V2Z" fill="#F3F3F3" />
+                                            </svg>
+                                            <p>Docker</p>
+                                        </div>
                                         <motion.img
                                             variants={floating}
                                             animate="animate"
@@ -390,18 +515,28 @@ function Skills() {
                                                     duration: 0.4
                                                 }
                                             }}
-                                            drag
-                                            dragConstraints={containerRefTech}
-                                            whileDrag={{
-                                                filter: "drop-shadow(0px 0px 7px white)",
-                                                transition: {
-                                                    duration: 0.5,
-                                                }
-                                            }}
+
                                             src="./images/docker.png" alt="docker" height={128} />
                                     </motion.div>
                                     <div class="empty"></div>
-                                    <motion.div variants={itemVariants}>
+                                    <motion.div variants={itemVariants} className='code-container'
+                                        drag
+                                        dragConstraints={containerRefTech}
+                                        whileDrag={{
+                                            filter: "drop-shadow(0px 0px 7px white)",
+                                            transition: {
+                                                duration: 0.5,
+                                            }
+                                        }}
+                                    >
+                                        <div className="code-name-container">
+                                            <svg width="60" height="31" viewBox="0 0 60 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="5" cy="26" r="4" stroke="#F3F3F3" stroke-width="2" />
+                                                <path d="M8.29291 22.5061L29.5061 1.2929" stroke="#F3F3F3" stroke-width="2" stroke-linecap="round" />
+                                                <path d="M30 0C29.4477 0 29 0.447715 29 1C29 1.55228 29.4477 2 30 2V0ZM30 2L60 2V0L30 0V2Z" fill="#F3F3F3" />
+                                            </svg>
+                                            <p>Git</p>
+                                        </div>
                                         <motion.img
                                             variants={floating4}
                                             animate="animate"
@@ -411,18 +546,28 @@ function Skills() {
                                                     duration: 0.4
                                                 }
                                             }}
-                                            drag
-                                            dragConstraints={containerRefTech}
-                                            whileDrag={{
-                                                filter: "drop-shadow(0px 0px 7px white)",
-                                                transition: {
-                                                    duration: 0.5,
-                                                }
-                                            }}
+
                                             src="./images/git.png" alt="git" height={128} />
                                     </motion.div>
                                     <div class="empty"></div>
-                                    <motion.div variants={itemVariants}>
+                                    <motion.div variants={itemVariants} className='code-container'
+                                        drag
+                                        dragConstraints={containerRefTech}
+                                        whileDrag={{
+                                            filter: "drop-shadow(0px 0px 7px white) invert(0)",
+                                            transition: {
+                                                duration: 0.5,
+                                            }
+                                        }}
+                                    >
+                                        <div className="code-name-container">
+                                            <svg width="60" height="31" viewBox="0 0 60 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="5" cy="26" r="4" stroke="#F3F3F3" stroke-width="2" />
+                                                <path d="M8.29291 22.5061L29.5061 1.2929" stroke="#F3F3F3" stroke-width="2" stroke-linecap="round" />
+                                                <path d="M30 0C29.4477 0 29 0.447715 29 1C29 1.55228 29.4477 2 30 2V0ZM30 2L60 2V0L30 0V2Z" fill="#F3F3F3" />
+                                            </svg>
+                                            <p>Vercel</p>
+                                        </div>
                                         <motion.img
                                             variants={floating3}
                                             animate="animate"
@@ -432,14 +577,7 @@ function Skills() {
                                                     duration: 0.4
                                                 }
                                             }}
-                                            drag
-                                            dragConstraints={containerRefTech}
-                                            whileDrag={{
-                                                filter: "drop-shadow(0px 0px 7px white) invert(0)",
-                                                transition: {
-                                                    duration: 0.5,
-                                                }
-                                            }}
+
                                             src="./images/vercel.png" alt="vercel" height={128} style={{ filter: "invert(1)" }} />
                                     </motion.div>
                                 </motion.div>
