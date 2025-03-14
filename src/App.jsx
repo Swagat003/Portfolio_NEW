@@ -5,6 +5,7 @@ import About from './components/About'
 import CustomCursor from "./components/CustomCursor";
 import NavBar from './components/NavBar';
 import Skills from './components/Skills';
+import Projects from './components/Projects';
 
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
       <Home />
       <About />
       <Skills />
-      <section className='bg' id='project'>Projects</section>
+      <Projects />
       <section className='bg' id='contact'>Contact</section>
       <section className='bg' id='snaps'>Snaps</section>
     </>

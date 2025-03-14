@@ -310,7 +310,7 @@ function About() {
                       opacity: 1,
                       transition: {
                         duration: 1,
-                        delay: 1,
+                        delay: 0.5,
                       }
                     }}
                     viewport={{

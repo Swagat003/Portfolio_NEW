@@ -11,6 +11,17 @@ function Skills() {
     const [totalLeet, setTotalLeet] = useState(0);
     const [totalProjects, setTotalProjects] = useState(0);
 
+
+    const skillScrollRef = useRef(null);
+    const skillScroll = useScroll({
+        target: skillScrollRef,
+        offset: ["start start", "end start"]
+    });
+
+    const opacity = useTransform(skillScroll.scrollYProgress, [0.1, 1], [0.2, 1]);
+
+
+
     const fetchLeet = async () => {
         try {
             const response = await fetch('https://leetcode-api-faisalshohag.vercel.app/swagat003');
@@ -116,7 +127,7 @@ function Skills() {
 
     return (
         <>
-            <div className="scroll-bg">
+            <div className="scroll-bg" id="skills-bg" ref={skillScrollRef}>
                 <section className='bg scroll-container' id='skills' ref={containerRef}>
                     <div class="custom-shape-divider-top-1741456221">
                         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -125,16 +136,60 @@ function Skills() {
                             <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
                         </svg>
                     </div>
+
+                    <motion.div id="project-title-box"
+                        style={{ 
+                            opacity,
+                         }}
+                    >
+
+                    </motion.div>
+
+                    <img src="./images/Dot_Grid.svg" alt="dots" id='dots' width={512} height={512}/>
+
                     <div className="skills container">
+                        
                         <div id="skills-top">
                             <div id="languages-container" ref={containerRefLang}>
-                                <h1>Languages</h1>
+                                <h1>
+                                    Languages
+                                </h1>
                                 <motion.div id="languages"
                                     variants={containerVariants}
                                     initial="hidden"
                                     whileInView="visible"
                                     viewport={{ once: true, amount: 0.3 }}
                                 >
+                                    <motion.div variants={itemVariants} className='code-container'
+                                        drag
+                                        dragConstraints={containerRefLang}
+                                        whileDrag={{
+                                            filter: "drop-shadow(0px 0px 7px white)",
+                                            transition: {
+                                                duration: 0.5,
+                                            }
+                                        }}
+                                    >
+                                        <div className="code-name-container">
+                                            <svg width="60" height="31" viewBox="0 0 60 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="5" cy="26" r="4" stroke="#F3F3F3" stroke-width="2" />
+                                                <path d="M8.29291 22.5061L29.5061 1.2929" stroke="#F3F3F3" stroke-width="2" stroke-linecap="round" />
+                                                <path d="M30 0C29.4477 0 29 0.447715 29 1C29 1.55228 29.4477 2 30 2V0ZM30 2L60 2V0L30 0V2Z" fill="#F3F3F3" />
+                                            </svg>
+                                            <p>C</p>
+                                        </div>
+                                        <motion.img src="./images/c.png" alt="c" height={128}
+                                            variants={floating}
+                                            animate="animate"
+                                            whileHover={{
+                                                scale: 1.2,
+                                                transition: {
+                                                    duration: 0.4
+                                                }
+                                            }}
+                                        />
+                                    </motion.div>
+                                    <div class="empty"></div>
                                     <motion.div variants={itemVariants} className='code-container'
                                         drag
                                         dragConstraints={containerRefLang}
@@ -324,7 +379,9 @@ function Skills() {
                                 </motion.div>
                             </div>
                             <div id="technologies-container" ref={containerRefTech}>
-                                <h1>Technologies</h1>
+                                <h1>
+                                    Technologies
+                                </h1>
                                 <motion.div id="technologies"
                                     variants={containerVariants}
                                     initial="hidden"
