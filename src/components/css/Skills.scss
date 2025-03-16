@@ -19,11 +19,26 @@
 }
 
 #skills-bg {
+    // position: relative;
 
-    // height: 200vh !important;
+    height: 150vh !important;
+
+
     #skills {
         display: flex;
         flex-direction: column;
+
+        #box {
+            height: 30px;
+            width: 30px;
+            background-color: var(--primary-color);
+            position: absolute;
+            top: clamp(9vh, 10vw, 17vh);
+            right: 8vw;
+            transform: rotate(30deg) translate(-50%, -50%);
+            z-index: -1;
+            opacity: 0.2;
+        }
 
         #dots {
             position: absolute;
@@ -37,16 +52,33 @@
             opacity: 0.2;
         }
 
-        #project-title-box{
-            height: 30px;
-            width: 30px;
-            background-color: var(--primary-color);
-            position: absolute;
-            top: clamp(9vh, 10vw, 17vh);
-            right: 8vw;
-            transform: rotate(30deg);
-            z-index: 1;
-            opacity: 0.2;
+        #project-title-bg {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100vw;
+            overflow: hidden;
+            height: 50vh;
+
+            #project-title-container {
+                position: absolute;
+                bottom: 0;
+                height: 100vh;
+                width: 100vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: var(--secondary-color);
+                color: var(--bg-color);
+
+                h1 {
+                    font-size: clamp(3rem, 8vw, 8rem);
+                    font-weight: 800;
+                    text-transform: uppercase;
+                    text-align: center;
+                    padding: 20px;
+                }
+            }
         }
 
         .skills {

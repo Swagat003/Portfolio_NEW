@@ -18,8 +18,9 @@ function Skills() {
         offset: ["start start", "end start"]
     });
 
-    const opacity = useTransform(skillScroll.scrollYProgress, [0.1, 1], [0.2, 1]);
 
+
+    const projectTitleHeight = useTransform(skillScroll.scrollYProgress, [0.25, 0.7], ["0vh", "200vh"]);
 
 
     const fetchLeet = async () => {
@@ -128,6 +129,7 @@ function Skills() {
     return (
         <>
             <div className="scroll-bg" id="skills-bg" ref={skillScrollRef}>
+
                 <section className='bg scroll-container' id='skills' ref={containerRef}>
                     <div class="custom-shape-divider-top-1741456221">
                         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -137,18 +139,12 @@ function Skills() {
                         </svg>
                     </div>
 
-                    <motion.div id="project-title-box"
-                        style={{ 
-                            opacity,
-                         }}
-                    >
+                    <div id="box"/>
 
-                    </motion.div>
-
-                    <img src="./images/Dot_Grid.svg" alt="dots" id='dots' width={512} height={512}/>
+                    <img src="./images/Dot_Grid.svg" alt="dots" id='dots' width={512} height={512} />
 
                     <div className="skills container">
-                        
+
                         <div id="skills-top">
                             <div id="languages-container" ref={containerRefLang}>
                                 <h1>
@@ -676,6 +672,17 @@ function Skills() {
                             </div>
                         </div>
                     </div>
+
+                    <motion.div id="project-title-bg"
+                        style={{
+                            height: projectTitleHeight
+                        }}
+                    >
+                        <div id="project-title-container">
+                            <h1>.PROJECTS</h1>
+                        </div>
+                    </motion.div>
+
                 </section>
             </div>
         </>

@@ -33,7 +33,6 @@ function About() {
     } else {
       setIsMidle(false);
     }
-    console.log(value);
   });
 
   return (

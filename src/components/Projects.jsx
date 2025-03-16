@@ -5,7 +5,7 @@ import './css/Projects.scss';
 function Projects() {
     return (
         <>
-            <div className="scroll-bg">
+            <div className="scroll-bg" id='projects-bg'>
                 <section className='bg scroll-container' id='project'>
                     projects
                 </section>
