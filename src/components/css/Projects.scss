@@ -2,4 +2,20 @@
     position: relative;
     background-color: var(--bg-color);
     z-index: 2;
+    #latest{
+        display: inline-block;
+        position: fixed;
+        top: 0;
+        left: -18rem;
+        font-size: 8rem;
+        text-wrap: nowrap;
+        mix-blend-mode: difference;
+    }
+    
+    @media screen and (max-width: 768px){
+        #latest{
+            font-size: 8rem;
+            left: -22rem;
+        }
+    }
 }

@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+.project-section {
+    background-color: var(--bg-color);
+    min-height: 0;
+
+    .project-svg-1 {
+        position: absolute;
+        right: 0;
+        top: 10vh;
+        z-index: -1;
+    }
+
+    .project-svg-2 {
+        position: absolute;
+        left: 0;
+        bottom: 10vh;
+        width: 100px;
+        transform: rotate(60deg);
+        z-index: -1;
+    }
+
+    .projects {
+        height: 80vh !important;
+
+        .project-name {
+            h1 {
+                font-size: clamp(3.4rem, 10vw, 6rem);
+                font-weight: 1000;
+                margin-top: 20px;
+                margin-bottom: 10px;
+                padding: 0;
+
+                .no {
+                    font-family: "Open Sans", sans-serif;
+                    color: transparent;
+                    -webkit-text-stroke: 4px;
+                }
+
+                .name {
+                    text-wrap: nowrap;
+                }
+            }
+        }
+
+        .project-bottom {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+
+            .project-bottom-left {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                p {
+                    font-size: 1.6rem;
+                    font-weight: 300;
+                    line-height: 1.4;
+                }
+                .buttons{
+                    display: flex;
+                    gap: 20px;
+
+                    a{
+                        padding: 10px 20px;
+                        // font-size: 1.2rem;
+                        font-weight: 500;
+                        cursor: pointer;
+                    }
+                    
+                    .git-link{
+                        font-weight: 600;
+                    }
+                    .project-link{
+                        border: 2px solid;
+                    }
+                }
+
+            }
+
+            .project-bottom-right {
+                position: relative;
+
+                .img-boder {
+                    position: absolute;
+                    border: 1px solid;
+                    top: 15px;
+                    left: 15px;
+                    width: 100%;
+                    aspect-ratio: 16/9;
+                    z-index: -1;
+                }
+
+                img {
+                    width: 100%;
+                    aspect-ratio: 16/9;
+                    object-fit: cover;
+                    border: 1px solid;
+                }
+
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .project-svg-1 {
+            opacity: 0.2;
+        }
+
+        .project-svg-2 {
+            opacity: 0.2;
+        }
+
+        .projects {
+            .project-name {
+                h1 {
+
+                    .no {
+                        -webkit-text-stroke: 2.5px;
+                    }
+
+                    .name {
+                        display: block;
+                    }
+                }
+            }
+
+            .project-bottom {
+                grid-template-columns: 1fr;
+                gap: 30px;
+
+                .project-bottom-left {
+                    p{
+                        font-size: 1rem;
+                        line-height: normal;
+                        font-weight: 400;
+                    }
+                }
+
+                .project-bottom-right {
+                    order: -1;
+
+                    .img-boder {}
+
+                    img {}
+
+                }
+            }
+        }
+    }
+}

@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react'
 import './css/Skills.scss'
 import CountUp from './CountUp';
-import { motion, useScroll, useTransform, useInView, useMotionValueEvent } from 'motion/react';
+import { motion, useScroll, useTransform, useInView, useMotionValueEvent, useSpring } from 'motion/react';
 import { animate, delay } from 'motion';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
@@ -20,8 +20,21 @@ function Skills() {
 
 
 
-    const projectTitleHeight = useTransform(skillScroll.scrollYProgress, [0.25, 0.7], ["0vh", "200vh"]);
+    const rawTitleHeight = useTransform(skillScroll.scrollYProgress, [0.2, 0.8], ["0vh", "200vh"]);
+    const projectTitleHeight = useSpring(rawTitleHeight, {
+        stiffness: 12000,
+        damping: 200,
+        mass: 1,
+    });
 
+    const [display, setDisplay] = useState("block");
+    useMotionValueEvent(skillScroll.scrollYProgress, "change", (value) => {
+        if (value == 1 || value == 0) {
+            setDisplay("none");
+        } else {
+            setDisplay("block");
+        }
+    });
 
     const fetchLeet = async () => {
         try {
@@ -139,7 +152,7 @@ function Skills() {
                         </svg>
                     </div>
 
-                    <div id="box"/>
+                    <div id="box" />
 
                     <img src="./images/Dot_Grid.svg" alt="dots" id='dots' width={512} height={512} />
 
@@ -675,7 +688,8 @@ function Skills() {
 
                     <motion.div id="project-title-bg"
                         style={{
-                            height: projectTitleHeight
+                            height: projectTitleHeight,
+                            display: display
                         }}
                     >
                         <div id="project-title-container">
