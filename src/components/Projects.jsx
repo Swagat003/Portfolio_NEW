@@ -12,7 +12,7 @@ function Projects() {
         offset: ["start center", "end start"]
     });
 
-    const latestY = useTransform(projectScroll.scrollYProgress, [0, 0.2], ["200vh", "-100vh"]);
+    const latestY = useTransform(projectScroll.scrollYProgress, [0, 0.2], ["200vh", "-200vh"]);
 
     return (
         <>
