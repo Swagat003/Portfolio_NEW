@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './css/ProjectCard.scss';
 
 function ProjectCard({
@@ -12,6 +12,9 @@ function ProjectCard({
     bgColor = "var(--bg-color)",
     textColor = "var(--primary-color)",
 }) {
+
+    const [isHovered, setIsHovered] = useState(false);
+
     return (
         <>
             <section className='bg scroll-container project-section' style={{ backgroundColor: bgColor, color: textColor }}>
@@ -71,7 +74,18 @@ function ProjectCard({
                                 {desc}
                             </p>
                             <div className="buttons">
-                                <a href={github} target="_blank" rel="noreferrer" className='git-link' style={{backgroundColor:textColor, color:bgColor}}>Github</a>
+                                <a href={github} target="_blank" rel="noreferrer" className='git-link'
+                                    style={{ 
+                                        backgroundColor: isHovered 
+                                            ? (textColor === 'var(--primary-color)' 
+                                                ? '#fff' 
+                                                : '#000') 
+                                            : textColor,
+                                        color: bgColor,
+                                    }}
+                                    onMouseEnter={() => setIsHovered(true)}
+                                    onMouseLeave={() => setIsHovered(false)}
+                                >Github</a>
                                 {isLink &&
                                     <a href={link} target="_blank" rel="noreferrer" className='project-link'>Explore</a>
                                 }

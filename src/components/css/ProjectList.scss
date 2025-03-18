@@ -1,0 +1,63 @@
+.project-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 5px;
+    .name{
+        font-size: 1.8rem;
+        font-weight: 700;
+        a{
+            font-size: 1.2rem;
+            margin: 0 5px;
+        }
+    }
+    .github{
+        a{
+            font-size: 1rem;
+            padding: 5px 10px;
+            border: 1px solid;
+            margin-left: 10px;
+            position: relative;
+
+            &::before{
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: var(--bg-color);
+                transform: scaleX(0);
+                transform-origin: right;
+                transition: transform 0.3s ease;
+                z-index: -1;
+            }
+
+            &:hover{
+                color: var(--primary-color);
+                &::before{
+                    transform: scaleX(1);
+                    transform-origin: left;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 768px){
+        .name{
+            font-size: 1.2rem;
+            a{
+                font-size: 1rem;
+            }
+        }
+        .github{
+            a{
+                font-size: 0.8rem;
+                padding: 5px 10px;
+                margin-left: 5px;
+            }
+        }
+        
+    }
+}

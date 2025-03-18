@@ -1,8 +1,82 @@
-#projects-bg{
+#projects-bg {
     position: relative;
     background-color: var(--bg-color);
+    height: 400vh !important;
     z-index: 2;
-    #latest{
+
+    #other-projects-section {
+        background-color: var(--primary-color);
+        color: var(--bg-color);
+
+        // .project-svg-1 {
+        //     position: absolute;
+        //     right: 0;
+        //     top: 10vh;
+        //     z-index: -1;
+        // }
+        #dot-svg{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            width: min(50vw, 256px);
+            height: min(50vw, 256px);
+            filter: invert(1);
+            transform: translate(-50%, -50%) rotate(45deg) scale(2.2);
+            -webkit-mask-image: radial-gradient(circle at bottom left, black, transparent 40%);
+            mask-image: radial-gradient(circle, black, transparent 40%);
+            opacity: 0.2;
+        }
+
+        #project-svg-2 {
+            position: absolute;
+            right: 20px;
+            top: 5vh;
+            width: 100px;
+            transform: rotate(30deg);
+            z-index: -1;
+        }
+
+        .container {
+            #top-name {
+                font-size: 2rem;
+                font-weight: 700;
+                margin-top: 2rem;
+                margin-bottom: 1rem;
+            }
+
+            #other-projects {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                >div {
+                    width: 80%;
+                    position: relative;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 1px;
+                        background: linear-gradient(to right, transparent, var(--bg-color), transparent);
+                    }
+
+                    &:nth-child(1) {
+                        &::before {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #latest {
         display: inline-block;
         position: fixed;
         top: 0;
@@ -11,11 +85,36 @@
         text-wrap: nowrap;
         mix-blend-mode: difference;
     }
-    
-    @media screen and (max-width: 768px){
-        #latest{
+
+    @media screen and (max-width: 768px) {
+
+        #project-svg-2 {
+            opacity: 0.2;
+            right: 0 !important;
+            top: 30px !important;
+        }
+
+        #latest {
             font-size: 8rem;
             left: -22rem;
+        }
+
+        #other-projects-section {
+            .container {
+                #top-name {
+                    font-size: 1.8rem;
+                }
+
+                #other-projects {
+                    >div {
+                        width: 100%;
+
+                        &::before {
+                            height: 0.5px;
+                        }
+                    }
+                }
+            }
         }
     }
 }

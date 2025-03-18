@@ -52,26 +52,29 @@
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
+
                 p {
                     font-size: 1.6rem;
                     font-weight: 300;
                     line-height: 1.4;
                 }
-                .buttons{
+
+                .buttons {
                     display: flex;
                     gap: 20px;
 
-                    a{
+                    a {
                         padding: 10px 20px;
-                        // font-size: 1.2rem;
                         font-weight: 500;
                         cursor: pointer;
+                        transition: all 0.3s ease-in-out;
                     }
-                    
-                    .git-link{
+
+                    .git-link {
                         font-weight: 600;
                     }
-                    .project-link{
+
+                    .project-link {
                         border: 2px solid;
                     }
                 }
@@ -102,7 +105,7 @@
         }
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 770px) {
         .project-svg-1 {
             opacity: 0.2;
         }
@@ -126,24 +129,60 @@
             }
 
             .project-bottom {
-                grid-template-columns: 1fr;
                 gap: 30px;
 
                 .project-bottom-left {
-                    p{
-                        font-size: 1rem;
+                    p {
+                        font-size: 1.2rem;
                         line-height: normal;
                         font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 430px) {
+
+        .projects {
+            .project-name {
+                h1 {
+                    line-height: 4rem;
+                }
+            }
+
+            .project-bottom {
+                grid-template-columns: 1fr;
+
+                .project-bottom-left {
+                    p {
+                        font-size: 1rem;
                     }
                 }
 
                 .project-bottom-right {
                     order: -1;
+                }
+            }
+        }
+    }
 
-                    .img-boder {}
+    @media screen and (max-width: 325px) {
 
-                    img {}
+        .projects {
+            .project-name {
+                h1 {
+                    font-size: 3rem;
+                    line-height: 2.9rem;
+                }
+            }
 
+            .project-bottom {
+
+                .project-bottom-left {
+                    p {
+                        font-size: 0.8rem;
+                    }
                 }
             }
         }
