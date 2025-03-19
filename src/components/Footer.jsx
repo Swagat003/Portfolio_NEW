@@ -1,12 +1,12 @@
-import React from 'react'
-import './css/Footer.scss'
+import React from 'react';
+import './css/Footer.scss';
 
 function Footer() {
   return (
-    <div>
-      Footer
-    </div>
-  )
+    <footer className="footer">
+      <p>&copy; CopyRight {new Date().getFullYear()}. All rights reserved.</p>
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;

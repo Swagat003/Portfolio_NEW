@@ -14,7 +14,6 @@ function App() {
       <About />
       <Skills />
       <Projects />
-      <section className='bg' id='contact'>Contact</section>
       <section className='bg' id='snaps'>Snaps</section>
     </>
   )
