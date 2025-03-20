@@ -116,7 +116,7 @@ function Home() {
   return (
     <>
       <div className='scroll-bg' id='home-bg' ref={homeScrollRef}>
-        <section className='bg scroll-container' id='home'>
+        <section className='bg scroll-container section' id='home'>
           <motion.h1
             className="about-title"
             style={{

@@ -38,7 +38,7 @@ function About() {
   return (
     <>
       <div className="scroll-bg" id='about-bg' ref={aboutScrollRef}>
-        <section className='bg scroll-container' id='about'>
+        <section className='bg scroll-container section' id='about'>
 
           <motion.div id="skill-title-container-bg"
             style={{

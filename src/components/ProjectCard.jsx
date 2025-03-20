@@ -17,7 +17,7 @@ function ProjectCard({
 
     return (
         <>
-            <section className='bg scroll-container project-section' style={{ backgroundColor: bgColor, color: textColor }}>
+            <section className='bg scroll-container project-section section' style={{ backgroundColor: bgColor, color: textColor }}>
 
 
                 <svg width="135" height="105" viewBox="0 0 90 70" fill={textColor} xmlns="http://www.w3.org/2000/svg" className="project-svg-1">

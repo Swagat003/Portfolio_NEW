@@ -62,7 +62,7 @@ function Projects() {
                     img='./images/project-3.png'
                 />
 
-                <section className='bg scroll-container' id='other-projects-section'>
+                <section className='bg scroll-container section' id='other-projects-section'>
 
                     <div className="curve" id='project-svg-2' >
                         <svg width="100" height="12" viewBox="0 0 400 42" fill="none" xmlns="http://www.w3.org/2000/svg" >
