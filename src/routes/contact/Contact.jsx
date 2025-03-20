@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import './Contact.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faInstagram, faLinkedin, faXTwitter } from '@fortawesome/free-brands-svg-icons';
+import Stairs from '../../components/Stairs';
 
 function Contact() {
   const [loading, setLoading] = useState(false);
@@ -45,7 +46,7 @@ function Contact() {
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            icon: true, 
+            icon: true,
             className: "custom-toast-success",
           });
           console.log('SUCCESS!');
@@ -60,7 +61,7 @@ function Contact() {
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            className: "custom-toast-error", 
+            className: "custom-toast-error",
           });
           console.log('FAILED...', error.text);
         }
@@ -68,91 +69,95 @@ function Contact() {
   };
 
   return (
-    <section id="contact-section">
-      <div className="container">
-        <div id="contact-top">
-          <h1>Contact</h1>
-          <div id="resume-download">
-            <Link
-              to="/files/Swagat_Pritam_Sahoo_Resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              download
-              className="resume-btn"
-            >
-              Download Resume
-            </Link>
-          </div>
-        </div>
-        <div id="contact-bottom">
-          <h2>Get in touch</h2>
-          <p>Let's connect! Feel free to reach out.</p>
-          <form className="contact-form" onSubmit={sendEmail}>
-            <input
-              type="text"
-              name="from_name"
-              placeholder="Your Name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              required
-            />
-            <input
-              type="email"
-              name="from_email"
-              placeholder="Your Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              required
-            ></textarea>
-            <button type="submit" disabled={loading}>
-              {loading ? 'Sending...' : 'Send Message'}
-            </button>
-          </form>
+    <>
+      <Stairs>
+        <section id="contact-section">
+          <div className="container">
+            <div id="contact-top">
+              <h1>Contact</h1>
+              <div id="resume-download">
+                <Link
+                  to="/files/Swagat_Pritam_Sahoo_Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  download
+                  className="resume-btn"
+                >
+                  Download Resume
+                </Link>
+              </div>
+            </div>
+            <div id="contact-bottom">
+              <h2>Get in touch</h2>
+              <p>Let's connect! Feel free to reach out.</p>
+              <form className="contact-form" onSubmit={sendEmail}>
+                <input
+                  type="text"
+                  name="from_name"
+                  placeholder="Your Name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required
+                />
+                <input
+                  type="email"
+                  name="from_email"
+                  placeholder="Your Email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+                <textarea
+                  name="message"
+                  placeholder="Your Message"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  required
+                ></textarea>
+                <button type="submit" disabled={loading}>
+                  {loading ? 'Sending...' : 'Send Message'}
+                </button>
+              </form>
 
-          <div id="social">
-            <a
-              href="https://www.linkedin.com/in/swagat-pritam-sahoo/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-link"
-            >
-              <FontAwesomeIcon icon={faLinkedin} />
-            </a>
-            <a
-              href="https://x.com/PritamSwagat"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-link"
-            >
-              <FontAwesomeIcon icon={faXTwitter} />
-            </a>
-            <a
-              href="https://instagram.com/__swagat_pritam__"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-link"
-            >
-              <FontAwesomeIcon icon={faInstagram} />
-            </a>
-            <a
-              href="https://github.com/Swagat003"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-link"
-            >
-              <FontAwesomeIcon icon={faGithub} />
-            </a>
+              <div id="social">
+                <a
+                  href="https://www.linkedin.com/in/swagat-pritam-sahoo/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-link"
+                >
+                  <FontAwesomeIcon icon={faLinkedin} />
+                </a>
+                <a
+                  href="https://x.com/PritamSwagat"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-link"
+                >
+                  <FontAwesomeIcon icon={faXTwitter} />
+                </a>
+                <a
+                  href="https://instagram.com/__swagat_pritam__"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-link"
+                >
+                  <FontAwesomeIcon icon={faInstagram} />
+                </a>
+                <a
+                  href="https://github.com/Swagat003"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-link"
+                >
+                  <FontAwesomeIcon icon={faGithub} />
+                </a>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </section>
+      </Stairs>
+    </>
   );
 }
 

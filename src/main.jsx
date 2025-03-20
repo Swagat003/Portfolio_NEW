@@ -5,7 +5,7 @@ import './index.scss'
 import Layout from './Layout.jsx'
 
 import App from './App.jsx'
-import Contact from './routes/contact/contact.jsx'
+import Contact from './routes/contact/Contact.jsx'
 import NotFound from './routes/notFound/NotFound.jsx'
 
 const router = createBrowserRouter([

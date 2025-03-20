@@ -4,17 +4,19 @@ import Home from './components/Home'
 import About from './components/About'
 import Skills from './components/Skills';
 import Projects from './components/Projects';
+import Stairs from './components/Stairs';
 
 
 function App() {
 
   return (
     <>
-      <Home />
-      <About />
-      <Skills />
-      <Projects />
-      <section className='bg' id='snaps'>Snaps</section>
+      <Stairs>
+        <Home />
+        <About />
+        <Skills />
+        <Projects />
+      </Stairs>
     </>
   )
 }
