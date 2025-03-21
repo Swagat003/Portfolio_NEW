@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { Link } from 'react-router-dom'
 
 
 function Home() {
@@ -191,11 +192,11 @@ function Home() {
                     />
                   </span>
                 </motion.h2>
-                <a href="mailto:swagat.pritam.2003@gmail.com" target='_blank'>
+                <Link to="/contact">
                   <StarBorder id="home-button" className='btn-hovered'>
                     <ShinyText text="CONTACT ME!" />
                   </StarBorder>
-                </a>
+                </Link>
               </motion.div>
               <motion.div id="home-content-right" className='image'
                 initial={{ opacity: 0, x: 50 }}

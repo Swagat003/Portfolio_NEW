@@ -7,6 +7,7 @@ import './Contact.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faInstagram, faLinkedin, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import Stairs from '../../components/Stairs';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
 function Contact() {
   const [loading, setLoading] = useState(false);
@@ -151,6 +152,14 @@ function Contact() {
                   className="social-link"
                 >
                   <FontAwesomeIcon icon={faGithub} />
+                </a>
+                <a
+                  href="mailto:swagat.pritam.2003@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-link"
+                >
+                  <FontAwesomeIcon icon={faEnvelope} />
                 </a>
               </div>
             </div>
