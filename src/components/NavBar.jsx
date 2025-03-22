@@ -13,7 +13,7 @@ function NavBar() {
           <li><HashLink smooth to="/#about-bg">About</HashLink></li>
           <li><HashLink smooth to="/#skills-bg">Skills</HashLink></li>
           <li><HashLink smooth to="/#projects-bg">Project</HashLink></li>
-          <li><Link to="/blog">Blog</Link></li>
+          {/* <li><Link to="/blog">Blog</Link></li> */}
           <li><Link to="/contact">Contact</Link></li>
         </ul>
         <div id="arrow"></div>
