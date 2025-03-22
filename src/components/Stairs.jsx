@@ -3,7 +3,7 @@ import './css/Stairs.scss'
 import { motion } from 'motion/react'
 import { delay } from 'motion'
 
-function Stairs({ children }) {
+function Stairs({ children , color = 'var(--primary-color)' }) {
 
   const anim = (variants, custom = null) => {
     return {
@@ -68,7 +68,7 @@ function Stairs({ children }) {
       <div className="stairs-container">
         {
           [...Array(noOfStairs)].map((_, i) => {
-            return <motion.div {...anim(expand, noOfStairs - i)} key={i} />
+            return <motion.div {...anim(expand, noOfStairs - i)} key={i} style={{backgroundColor:color}} />
           })
         }
       </div>

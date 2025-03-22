@@ -1,0 +1,10 @@
+#blog-home{
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    width: 100%;
+    height: calc(100dvh - 40px - 0.8rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
