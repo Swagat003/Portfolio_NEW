@@ -12,11 +12,16 @@ function ProjectList({
     return (
         <div className='project-list'>
             <div className="name">
-                <span>{name}</span>{" "}
-                {isLink &&
-                    <a href={link} target="_blank" rel="noreferrer">
-                        <FontAwesomeIcon icon={faLink} />
-                    </a>
+                {isLink ?
+                    <>
+                        <a href={link} target="_blank" rel="noreferrer">
+                            <span>{name}</span>{" "}
+                            <FontAwesomeIcon icon={faLink} id='link-icon' />
+                        </a>
+                    </> :
+                    <>
+                        <span>{name}</span>
+                    </>
                 }
             </div>
             <div className="github">

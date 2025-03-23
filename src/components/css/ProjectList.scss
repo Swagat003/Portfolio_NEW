@@ -1,27 +1,37 @@
-.project-list{
+.project-list {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     padding: 20px 5px;
-    .name{
+
+    .name {
         font-size: 1.8rem;
         font-weight: 700;
-        a{
-            font-size: 1.2rem;
-            padding: 3px;
-            margin: 0 5px;
+
+        a {
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+
+            #link-icon {
+                font-size: 1.2rem;
+                padding: 3px;
+                margin: 0 5px;
+            }
         }
     }
-    .github{
-        a{
+
+    .github {
+        a {
             font-size: 1rem;
             padding: 5px 10px;
             border: 1px solid;
             margin-left: 10px;
             position: relative;
 
-            &::before{
+            &::before {
                 content: "";
                 display: block;
                 position: absolute;
@@ -36,29 +46,36 @@
                 z-index: -1;
             }
 
-            &:hover{
+            &:hover {
                 color: var(--primary-color);
-                &::before{
+
+                &::before {
                     transform: scaleX(1);
                     transform-origin: left;
                 }
             }
         }
     }
-    @media screen and (max-width: 768px){
-        .name{
+
+    @media screen and (max-width: 768px) {
+        .name {
             font-size: 1.2rem;
-            a{
-                font-size: 1rem;
+            a {
+                font-size: 1.2rem;
+                #link-icon {
+                    font-size: 1rem;
+                }
             }
+
         }
-        .github{
-            a{
+
+        .github {
+            a {
                 font-size: 0.8rem;
                 padding: 5px 10px;
                 margin-left: 5px;
             }
         }
-        
+
     }
 }
