@@ -655,7 +655,7 @@ function Skills() {
                                     to={totalLeet}
                                     from={0}
                                     delay={1}
-                                    duration={5}
+                                    duration={3}
                                     separator=","
                                     className="count"
                                 />
@@ -672,7 +672,7 @@ function Skills() {
                                     to={totalProjects}
                                     from={0}
                                     delay={1}
-                                    duration={5}
+                                    duration={3}
                                     separator=","
                                     className="count"
                                 />
