@@ -77,11 +77,11 @@ function ProjectCard({
                             </p>
                             <div className="buttons">
                                 <a href={github} target="_blank" rel="noreferrer" className='git-link'
-                                    style={{ 
-                                        backgroundColor: isHovered 
-                                            ? (textColor === 'var(--primary-color)' 
-                                                ? '#fff' 
-                                                : '#000') 
+                                    style={{
+                                        backgroundColor: isHovered
+                                            ? (textColor === 'var(--primary-color)'
+                                                ? '#fff'
+                                                : '#000')
                                             : textColor,
                                         color: bgColor,
                                     }}
@@ -89,7 +89,9 @@ function ProjectCard({
                                     onMouseLeave={() => setIsHovered(false)}
                                 >Github</a>
                                 {isLink &&
-                                    <a href={link} target="_blank" rel="noreferrer" className='project-link'>Try It <span><FontAwesomeIcon icon={faArrowRight} /></span></a>
+                                    <a href={link} target="_blank" rel="noreferrer" className='project-link'>Try It
+                                        <span className='arrow-right'><FontAwesomeIcon icon={faArrowRight} /></span>
+                                    </a>
                                 }
                             </div>
                         </div>

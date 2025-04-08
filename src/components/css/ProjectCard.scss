@@ -71,15 +71,26 @@
                         cursor: pointer;
                         transition: all 0.3s ease-in-out;
                     }
-
+                    
                     .git-link {
                         font-weight: 600;
                     }
 
                     .project-link {
-                        border: 2px solid;
-                        span {
+                        outline: 2px solid;
+                        outline-offset: -2px;
+                        .arrow-right {
+                            position: relative;
                             padding-left: 10px;
+                            left: 0;
+                            opacity: 1;
+                            transition: all 0.3s ease-in-out;
+                        }
+                        &:active {
+                            .arrow-right {
+                                left: 10px;
+                                opacity: 0;
+                            }
                         }
                     }
                 }
