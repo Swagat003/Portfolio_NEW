@@ -65,6 +65,8 @@
 
                     a {
                         padding: 10px 20px;
+                        text-align: center;
+                        vertical-align: middle;
                         font-weight: 500;
                         cursor: pointer;
                         transition: all 0.3s ease-in-out;
@@ -76,6 +78,9 @@
 
                     .project-link {
                         border: 2px solid;
+                        span {
+                            padding-left: 10px;
+                        }
                     }
                 }
 

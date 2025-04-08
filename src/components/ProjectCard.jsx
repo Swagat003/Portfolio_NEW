@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import './css/ProjectCard.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 function ProjectCard({
     no = "00",
@@ -87,7 +89,7 @@ function ProjectCard({
                                     onMouseLeave={() => setIsHovered(false)}
                                 >Github</a>
                                 {isLink &&
-                                    <a href={link} target="_blank" rel="noreferrer" className='project-link'>Explore</a>
+                                    <a href={link} target="_blank" rel="noreferrer" className='project-link'>Try It <span><FontAwesomeIcon icon={faArrowRight} /></span></a>
                                 }
                             </div>
                         </div>
