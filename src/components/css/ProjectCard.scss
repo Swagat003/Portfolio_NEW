@@ -86,9 +86,14 @@
                             opacity: 1;
                             transition: all 0.3s ease-in-out;
                         }
+                        &:hover{
+                            .arrow-right {
+                                left: 4px;
+                            }
+                        }
                         &:active {
                             .arrow-right {
-                                left: 10px;
+                                left: 14px;
                                 opacity: 0;
                             }
                         }
