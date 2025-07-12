@@ -234,6 +234,38 @@
                     left: -50px;
                 }
 
+                h1 {
+                    font-size: clamp(5rem, 15vw, 13rem);
+                    font-weight: 1000;
+                    letter-spacing: 0.1rem;
+                }
+
+                #title-1 {
+                    position: relative;
+                    top: 0%;
+                    left: 0%;
+                    z-index: 1;
+                }
+
+                #title-2 {
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    color: cyan;
+                    transform: translate(clamp(2px, 1vw, 5px),
+                            clamp(1px, 0.6vw, 3px));
+                }
+
+                #title-3 {
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    color: red;
+                    transform: translate(clamp(-5px, -1vw, -2px),
+                            clamp(-3px, -0.6vw, -1px));
+
+                }
+
                 #trg-2-1 {
                     bottom: -100px;
                     right: 60px;
