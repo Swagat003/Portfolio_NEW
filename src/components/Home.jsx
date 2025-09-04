@@ -36,29 +36,28 @@ function Home() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const aboutXTransform = isMobile
-    ? useTransform(aboutScroll.scrollYProgress, [0, 1], ["calc(150vw - 0% + 1rem)", "calc(0vw - 100% - 1rem)"])
-    : useTransform(aboutScroll.scrollYProgress, [0, 0.5], ["calc(150vw - 0% + 1rem)", "calc(50vw - 50% + 1rem)"]);
+  const inputRangeX = isMobile ? [0, 1] : [0, 0.5];
+  const outputRangeX = isMobile
+    ? ["calc(150vw - 0% + 1rem)", "calc(0vw - 100% - 1rem)"]
+    : ["calc(150vw - 0% + 1rem)", "calc(50vw - 50% + 1rem)"];
 
+  const aboutXTransform = useTransform(aboutScroll.scrollYProgress, inputRangeX, outputRangeX);
 
-  const aboutScaleTransform = isMobile
-    ? 1
-    : useTransform(aboutScroll.scrollYProgress, [0.5, 1], [1, 5]);
+  const aboutScaleTransform = useTransform(
+    aboutScroll.scrollYProgress,
+    [0.5, 1],
+    isMobile ? [1, 1] : [1, 5]
+  );
 
-
-  const aboutOpacityTransform = isMobile
-    ? useTransform(aboutScroll.scrollYProgress, [0.9, 0.96], [1, 0])
-    : useTransform(aboutScroll.scrollYProgress, [0.5, 0.96], [1, 0]);
+  const inputRangeOpacity = isMobile ? [0.9, 0.96] : [0.5, 0.96];
+  const aboutOpacityTransform = useTransform(aboutScroll.scrollYProgress, inputRangeOpacity, [1, 0]);
 
   useEffect(() => {
-    aboutOpacityTransform.onChange((value) => {
-      if (value === 0) {
-        setDisplay("none")
-      } else {
-        setDisplay("block")
-      }
-    })
-  }, [aboutOpacityTransform])
+    const unsubscribe = aboutOpacityTransform.onChange((value) => {
+      setDisplay(value === 0 ? "none" : "block");
+    });
+    return () => unsubscribe();
+  }, [aboutOpacityTransform]);
 
 
   const xTransform = useTransform(homeScroll.scrollYProgress, [0, 1], ["0dvw", "-100vw"])
