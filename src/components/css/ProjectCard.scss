@@ -151,6 +151,7 @@
 
             .project-bottom {
                 gap: 30px;
+                
 
                 .project-bottom-left {
                     p {
@@ -163,7 +164,7 @@
         }
     }
 
-    @media screen and (max-width: 430px) {
+    @media screen and (max-width: 430px), (orientation: portrait) {
 
         .projects {
             .project-name {
@@ -173,7 +174,8 @@
             }
 
             .project-bottom {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr !important;
+                
 
                 .project-bottom-left {
                     p {
