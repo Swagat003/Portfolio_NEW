@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://swagatpritamsahoo.in/sitemap.xml
