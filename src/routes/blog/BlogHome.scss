@@ -1,10 +1,120 @@
-#blog-home{
+#blog-home,
+.blog-home {
     background-color: var(--primary-color);
     color: var(--bg-color);
+    min-height: 60vh;
+}
+
+.blog-list {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.blog-card {
+    display: grid;
+    grid-template-columns: 1fr 180px;
+    gap: 1rem;
+    align-items: center;
+    background: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 1.25rem 0;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+    color: var(--bg-color);
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0.5px;
+        background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.2), transparent);
+    }
+
+    &:last-child {
+        &::before {
+            display: none;
+        }
+    }
+}
+
+
+
+.card-image {
+    width: 180px;
+    height: 110px;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.card-image img {
     width: 100%;
-    height: calc(100dvh - 40px - 0.8rem);
+    height: 100%;
+    object-fit: cover;
+    display: block
+}
+
+.card-body {
+    color: var(--bg-color);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    gap: 0.75rem;
+}
+
+.card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.meta-left {
+    display: flex;
+    gap: 1rem;
     align-items: center;
+}
+
+.card-date {
+    font-size: 0.75rem;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.card-tags {
+    display: flex;
+    gap: 0.5rem
+}
+
+.tag {
+    background: rgba(0, 0, 0, 0.06) !important;
+    padding: 0.2rem 0.5rem;
+    border-radius: 999px;
+    font-size: 0.75rem
+}
+
+.card-title {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.card-desc {
+    margin: 0;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.no-blogs {
+    text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+    .blog-card {
+        grid-template-columns: 1fr;
+    }
+
+    .card-image {
+        display: none
+    }
 }

@@ -1,0 +1,10 @@
+[
+  {
+    "id": "first-post",
+    "title": "First Blog Post",
+    "description": "A brief intro to the blog and how this demo works.",
+    "date": "2025-09-09",
+    "tags": ["intro", "demo"],
+    "image": "/blogs/first-post/image1.jpg"
+  }
+]

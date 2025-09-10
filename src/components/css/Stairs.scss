@@ -1,4 +1,5 @@
 .stairs{
+    z-index: 100;
     .stairs-container{
         height: 100dvh;
         width: 100vw;
@@ -7,7 +8,7 @@
         left: 0;
         pointer-events: none;
         display: flex;
-        z-index: 2;
+        z-index: 100;
 
         div{
             position: relative;
@@ -20,7 +21,7 @@
         width: 100%;
         height: 100vh;
         background-color: black;
-        z-index: 1;
+        z-index: 100;
         pointer-events: none;
         top: 0;
         left: 0;

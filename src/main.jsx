@@ -7,7 +7,9 @@ import Layout from './Layout.jsx'
 import App from './App.jsx'
 import Contact from './routes/contact/Contact.jsx'
 import NotFound from './routes/notFound/NotFound.jsx'
+import BlogLayout from './routes/blog/BlogLayout.jsx'
 import BlogHome from './routes/blog/BlogHome.jsx'
+import BlogPost from './routes/blog/blogPost/BlogPost.jsx'
 
 const router = createBrowserRouter([
   {
@@ -24,7 +26,17 @@ const router = createBrowserRouter([
       },
       {
         path: 'blog',
-        element: <BlogHome />
+        element: <BlogLayout />,
+        children: [
+          {
+            index: '/',
+            element: <BlogHome />
+          },
+          {
+            path: ':postId',
+            element: <BlogPost />
+          }
+        ]
       },
       {
         path: '*',

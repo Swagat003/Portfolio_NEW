@@ -1,0 +1,109 @@
+#blog-section {
+    min-height: calc(100dvh - 40px - 0.8rem);
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+
+    .container {
+        position: relative;
+
+        #blog-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 0.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            background: var(--primary-color); 
+            width: 100%;
+
+            #blog-link {
+                h2 {
+                    font-size: 2.4rem;
+                    margin: 0;
+                }
+            }
+
+            #search-box {
+                height: 40px;
+                width: 240px;
+                border-radius: 20px;
+                background: rgb(236, 236, 236);
+                color: var(--bg-color);
+                display: flex;
+                align-items: center;
+
+                svg {
+                    margin: 0 12px;
+                    color: var(--bg-color);
+                    transition: all 0.18s;
+
+                    path {
+                        transition: all 0.18s;
+                        fill: rgba(0, 0, 0, 0.5);
+                    }
+                }
+
+                .search-input {
+                    padding: 10px 20px 10px 0px;
+                    height: 40px;
+                    background-color: transparent;
+                    outline: none;
+                    border: none;
+
+                    &::placeholder {
+                        color: rgba(0, 0, 0, 0.5);
+                    }
+                }
+
+                &:focus-within {
+                    svg {
+                        color: var(--bg-color);
+                    }
+
+                    svg path {
+                        fill: var(--bg-color) !important;
+                    }
+                }
+            }
+        }
+
+        #blog-bottom {
+            display: block;
+            width: 100%;
+
+            .blog-inner {
+                display: block;
+                width: 100%;
+                max-width: 900px;
+                margin: 0 auto;
+                padding: 2rem 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    #blog-section {
+        .container {
+            #blog-top {
+                #search-box {
+                    height: 40px;
+                    width: 40px;
+                    background-color: transparent !important;
+                    justify-content: end;
+
+                    svg {
+                        margin: 0;
+                    }
+
+                    .search-input {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
