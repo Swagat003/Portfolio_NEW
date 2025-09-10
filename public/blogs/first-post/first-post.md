@@ -3,115 +3,38 @@
 
 ![Cover Image](image1.jpg)
 
-Welcome to my first blog! 🎉
+Hello and welcome, everyone! 👋  
 
-This post contains a wide range of Markdown features so you can test the UI thoroughly. You'll find headings, lists, code samples, tables, images, blockquotes, task lists, and more.
-
----
-
-## Quick examples
-
-- Inline code: `const x = 42`  
-- Bold and italic: **bold**, *italic*, and ***both***  
-- Strikethrough: ~~deprecated~~  
-
-### Links
-
-- External: [Vite](https://vitejs.dev)  
-- Internal (relative): [Cover image file](image1.jpg)
+I’m really excited to have you here. This is my very first blog post, and I couldn’t think of a better way to start than by simply saying *thank you* for stopping by. Whether you’re a friend, a fellow developer, or someone who just stumbled upon this page, I’m glad you’re here.  
 
 ---
 
-## Code samples
+## Why I’m Starting This Blog ✍️
 
-Inline code is useful for short snippets like `npm run dev`.
+For a while now, I’ve wanted a space where I could share my journey, the things I learn, the projects I build, and the challenges I face along the way. Writing feels like a great way to:  
 
-```bash
-# Start the dev server
-npm run dev
-```
-
-```javascript
-// Example JavaScript
-function greet(name) {
-	return `Hello, ${name}!`;
-}
-
-console.log(greet('Reader'));
-```
-
-```python
-# Small Python example
-def fib(n):
-		a, b = 0, 1
-		for _ in range(n):
-				a, b = b, a + b
-		return a
-
-print(fib(10))
-```
+- Reflect on what I’m learning 💭  
+- Share knowledge with the community 🌍  
+- Keep a record of my growth 📈  
 
 ---
 
-## Lists
+## What You Can Expect Here 🎯
 
-1. First ordered item
-2. Second ordered item
-	 - Nested unordered A
-		 - Nested deeper
-3. Third ordered item
+This blog won’t just be about code (though there will be plenty of that!). You’ll find posts on:  
 
-- Unordered bullet
-- Another bullet
-	1. Nested ordered inside bullet
-	2. Another nested
+- Web Development — MERN stack, tips, and best practices  
+- Artificial Intelligence & Machine Learning experiments 🤖  
+- My personal projects and behind-the-scenes thoughts  
+- Occasional life updates, lessons, and ideas worth sharing  
 
 ---
 
-## Task list
+## Wrapping Up 💡
 
-- [x] Write the post
-- [ ] Add images
-- [ ] Polish styles
+Since this is my first post, I’ll keep it short and simple. But trust me — there’s a lot more coming!  
 
----
+Once again, welcome to my blog. I hope you’ll stick around, learn something new, and maybe even get inspired to start your own journey.  
 
-## Table
-
-| Feature | Supported | Notes |
-|---|:---:|---|
-| Headings | ✅ | h1..h6 |
-| Code fences | ✅ | with language hints |
-| Tables | ✅ | via GFM |
-| Task lists | ✅ | via GFM |
-
----
-
-## Blockquote
-
-> This is a blockquote. Use it for quotes, callouts, or notes.
->
-> - It can contain lists
-> - And other markdown
-
----
-
-## Images (inline and repeated)
-
-Here is the cover again (relative path):
-
-![Cover Image Reuse](image1.jpg)
-
----
-
-## HTML snippet (should render as HTML inside MD)
-
-<div style="padding:8px;border-radius:6px;background:rgba(0,0,0,0.06)">This is a raw HTML block inside markdown.</div>
-
----
-
-## Conclusion
-
-This markdown contains many elements to stress-test the blog post UI. If something doesn't look right (tables, code blocks, images, or horizontal rules), tell me which element misrenders and I'll tweak the styling or renderer.
-
-Happy testing! 🚀
+Cheers,  
+*Swagat Pritam Sahoo* ✨
