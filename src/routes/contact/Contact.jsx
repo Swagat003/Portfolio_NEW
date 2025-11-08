@@ -78,7 +78,7 @@ function Contact() {
               <h1>Contact</h1>
               <div id="resume-download">
                 <Link
-                  to="/files/Swagat_Pritam_Sahoo_Resume.pdf"
+                  to="/files/Resume_Swagat_Pritam_Sahoo[Mask].pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   download
